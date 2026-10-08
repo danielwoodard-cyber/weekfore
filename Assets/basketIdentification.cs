@@ -5,7 +5,6 @@ public class basketIdentification : MonoBehaviour
     public int playerHealth = 5;
     public int maxPlayerHealth = 5;
     public int score = 0;
-    [SerializeField] private int coinValue = 1;
 
     void OnTriggerEnter(Collider other)
     {
@@ -37,10 +36,9 @@ public class basketIdentification : MonoBehaviour
                 GameOver();
             }
         }
-
-        void GameOver()
-        {
-            SceneManager.LoadScene("gameOverScreen");
-        }
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("gameOverScreen");
     }
 }
